@@ -1,0 +1,1505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#081326">
+  <meta name="description" content="Victor N. — Frontend Developer, UI/UX Designer and AI Specialist. Explore professional experience, skills, education and work.">
+  <meta property="og:title" content="Victor N. | VN Digital">
+  <meta property="og:description" content="Frontend Developer | UI/UX Designer | AI Specialist">
+  <meta property="og:type" content="website">
+  <title>Victor N. | VN Digital — Digital Portfolio</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <style>
+    :root {
+      --bg: #081326;
+      --panel: #101f36;
+      --panel2: #f4f7fc;
+      --text: #edf4ff;
+      --muted: #a9b8ce;
+      --ink: #142238;
+      --blue: #438cff;
+      --cyan: #55d8e8;
+      --line: rgba(255,255,255,.12);
+      --shadow: 0 22px 60px rgba(0,0,0,.22);
+      --radius: 22px;
+    }
+
+    body.light {
+      --bg: #f4f7fc;
+      --panel: #fff;
+      --panel2: #eaf0f8;
+      --text: #142238;
+      --muted: #60718a;
+      --ink: #142238;
+      --line: rgba(20,34,56,.13);
+      --shadow: 0 18px 45px rgba(28,55,90,.10);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      transition: background .3s, color .3s;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 40px));
+      margin: auto;
+    }
+
+    .section {
+      padding: 100px 0;
+    }
+
+    .eyebrow {
+      color: var(--cyan);
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.12;
+      margin: 12px 0 16px;
+      letter-spacing: -.04em;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      max-width: 650px;
+    }
+
+    .gradient {
+      background: linear-gradient(100deg, var(--blue), var(--cyan));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    header {
+      position: fixed;
+      z-index: 20;
+      inset: 0 0 auto;
+      background: color-mix(in srgb, var(--bg) 86%, transparent);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      font-size: 1.2rem;
+      font-weight: 900;
+      letter-spacing: -.04em;
+    }
+
+    .brand span {
+      color: var(--cyan);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 26px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-size: .88rem;
+      color: var(--muted);
+      font-weight: 650;
+    }
+
+    .nav-links a:hover {
+      color: var(--cyan);
+    }
+
+    .nav-actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .icon-btn,
+    .menu-btn {
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      background: var(--panel);
+      color: var(--text);
+    }
+
+    .menu-btn {
+      display: none;
+      border-radius: 12px;
+      font-size: 1.2rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 12px 19px;
+      border-radius: 999px;
+      font-weight: 750;
+      font-size: .9rem;
+      border: 1px solid transparent;
+      transition: .25s;
+    }
+
+    .btn-primary {
+      background: linear-gradient(110deg, var(--blue), #2865d8);
+      color: white;
+      box-shadow: 0 10px 28px rgba(67,140,255,.22);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 32px rgba(67,140,255,.32);
+    }
+
+    .btn-outline {
+      border-color: var(--line);
+      color: var(--text);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--cyan);
+      color: var(--cyan);
+    }
+
+    .hero {
+      min-height: 760px;
+      padding: 150px 0 90px;
+      display: grid;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero:before {
+      content: "";
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(67,140,255,.19), transparent 68%);
+      right: -150px;
+      top: 70px;
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+    }
+
+    .availability {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 7px 13px;
+      color: var(--muted);
+      font-size: .8rem;
+      margin-bottom: 24px;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      background: #4ade80;
+      border-radius: 50%;
+      box-shadow: 0 0 12px #4ade80;
+    }
+
+    .hero h1 {
+      font-size: clamp(3rem, 7vw, 5.8rem);
+      line-height: .99;
+      letter-spacing: -.07em;
+      margin-bottom: 24px;
+    }
+
+    .hero-copy {
+      font-size: 1.08rem;
+      color: var(--muted);
+      max-width: 590px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 30px 0;
+    }
+
+    .quick-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: .88rem;
+    }
+
+    .quick-links a:hover {
+      color: var(--cyan);
+    }
+
+    .portrait-wrap {
+      position: relative;
+      max-width: 390px;
+      margin: auto;
+    }
+
+    .portrait {
+      aspect-ratio: 4/5;
+      border: 1px solid var(--line);
+      border-radius: 34px;
+      background: linear-gradient(145deg, rgba(67,140,255,.18), rgba(85,216,232,.06)), var(--panel);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+
+    .portrait img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .portrait-placeholder {
+      text-align: center;
+      padding: 30px;
+      color: var(--muted);
+    }
+
+    .portrait-placeholder strong {
+      display: block;
+      color: var(--text);
+      font-size: 1.1rem;
+      margin: 12px 0 4px;
+    }
+
+    .portrait-placeholder .camera {
+      font-size: 3rem;
+      color: var(--cyan);
+    }
+
+    .float-card {
+      position: absolute;
+      bottom: 28px;
+      left: -38px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      padding: 15px 18px;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      font-size: .85rem;
+    }
+
+    .float-card b {
+      display: block;
+      font-size: 1.2rem;
+      color: var(--cyan);
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 60px;
+    }
+
+    .stat {
+      padding: 19px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: color-mix(in srgb, var(--panel) 72%, transparent);
+    }
+
+    .stat b {
+      font-size: 1.6rem;
+      display: block;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: .82rem;
+    }
+
+    .light-section {
+      background: var(--panel2);
+      color: var(--ink);
+    }
+
+    .light-section .section-intro,
+    .light-section .muted {
+      color: #60718a;
+    }
+
+    .light-section .eyebrow {
+      color: #2474d8;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 55px;
+      align-items: start;
+    }
+
+    .about-card {
+      background: var(--panel);
+      color: var(--text);
+      border: 1px solid var(--line);
+      padding: 28px;
+      border-radius: var(--radius);
+    }
+
+    .about-card p {
+      color: var(--muted);
+    }
+
+    .pill-row {
+      display: flex;
+      gap: 9px;
+      flex-wrap: wrap;
+      margin-top: 22px;
+    }
+
+    .pill {
+      font-size: .78rem;
+      padding: 7px 11px;
+      border-radius: 999px;
+      background: rgba(67,140,255,.12);
+      color: var(--cyan);
+      border: 1px solid rgba(67,140,255,.2);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 38px;
+    }
+
+    .skill-card,
+    .project-card,
+    .timeline-card,
+    .quote-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 23px;
+      transition: transform .25s, border-color .25s;
+    }
+
+    .skill-card:hover,
+    .project-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--blue);
+    }
+
+    .skill-icon {
+      font-size: 1.5rem;
+      margin-bottom: 12px;
+    }
+
+    .skill-card h3 {
+      font-size: 1rem;
+      margin-bottom: 7px;
+    }
+
+    .skill-card p {
+      color: var(--muted);
+      font-size: .87rem;
+    }
+
+    .timeline {
+      margin-top: 38px;
+      display: grid;
+      gap: 17px;
+      max-width: 850px;
+    }
+
+    .timeline-card {
+      position: relative;
+      padding: 24px 26px;
+    }
+
+    .timeline-card .date {
+      font-size: .78rem;
+      color: var(--cyan);
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .timeline-card h3 {
+      margin: 7px 0 4px;
+    }
+
+    .timeline-card p {
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    .tag {
+      display: inline-block;
+      margin-top: 12px;
+      font-size: .75rem;
+      color: var(--muted);
+      border: 1px solid var(--line);
+      padding: 4px 9px;
+      border-radius: 30px;
+    }
+
+    .filter-row {
+      display: flex;
+      gap: 9px;
+      flex-wrap: wrap;
+      margin: 30px 0;
+    }
+
+    .filter {
+      padding: 8px 15px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: transparent;
+      color: var(--muted);
+    }
+
+    .filter.active,
+    .filter:hover {
+      background: var(--blue);
+      border-color: var(--blue);
+      color: #fff;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .project-visual {
+      height: 175px;
+      border-radius: 13px;
+      background: linear-gradient(135deg, rgba(67,140,255,.22), rgba(85,216,232,.08));
+      display: grid;
+      place-items: center;
+      color: var(--cyan);
+      font-size: 2.2rem;
+      margin-bottom: 18px;
+      border: 1px dashed rgba(85,216,232,.3);
+    }
+
+    .project-card p {
+      color: var(--muted);
+      font-size: .88rem;
+      margin: 8px 0;
+    }
+
+    .project-card h3 {
+      font-size: 1.08rem;
+    }
+
+    .project-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 16px;
+      flex-wrap: wrap;
+    }
+
+    .text-link {
+      font-size: .82rem;
+      color: var(--cyan);
+      font-weight: 750;
+    }
+
+    .cert-grid,
+    .quote-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 17px;
+      margin-top: 35px;
+    }
+
+    .cert-card {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 23px;
+      background: var(--panel);
+    }
+
+    .cert-card small {
+      color: var(--cyan);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .cert-card p {
+      color: var(--muted);
+      font-size: .87rem;
+      margin-top: 8px;
+    }
+
+    .quote-card p {
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    .quote-card b {
+      display: block;
+      margin-top: 17px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 45px;
+      margin-top: 38px;
+    }
+
+    .contact-details {
+      display: grid;
+      gap: 15px;
+      margin-top: 24px;
+    }
+
+    .contact-item {
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--panel);
+    }
+
+    .contact-item small {
+      color: var(--muted);
+      display: block;
+    }
+
+    .contact-form {
+      display: grid;
+      gap: 14px;
+      background: var(--panel);
+      padding: 26px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+    }
+
+    .field {
+      display: grid;
+      gap: 7px;
+    }
+
+    .field label {
+      font-size: .84rem;
+      font-weight: 700;
+    }
+
+    .field input,
+    .field textarea {
+      width: 100%;
+      padding: 13px 14px;
+      border: 1px solid var(--line);
+      border-radius: 11px;
+      background: var(--bg);
+      color: var(--text);
+      font: inherit;
+      outline: none;
+    }
+
+    .field input:focus,
+    .field textarea:focus {
+      border-color: var(--blue);
+    }
+
+    .field textarea {
+      min-height: 135px;
+      resize: vertical;
+    }
+
+    .form-note {
+      font-size: .78rem;
+      color: var(--muted);
+    }
+
+    footer {
+      padding: 28px 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .85rem;
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .socials {
+      display: flex;
+      gap: 15px;
+    }
+
+    .socials a:hover {
+      color: var(--cyan);
+    }
+
+    #topBtn {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      width: 45px;
+      height: 45px;
+      border: 0;
+      border-radius: 50%;
+      background: var(--blue);
+      color: white;
+      font-size: 1.2rem;
+      box-shadow: var(--shadow);
+      display: none;
+      z-index: 10;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity .7s, transform .7s;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    @media(max-width:850px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 76px;
+        left: 0;
+        right: 0;
+        background: var(--bg);
+        padding: 20px;
+        flex-direction: column;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .hero-grid,
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 125px;
+      }
+
+      .portrait-wrap {
+        max-width: 330px;
+      }
+
+      .float-card {
+        left: -10px;
+      }
+
+      .skills-grid,
+      .projects-grid,
+      .cert-grid,
+      .quote-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media(max-width:560px) {
+      .container {
+        width: min(100% - 30px, 1120px);
+      }
+
+      .section {
+        padding: 75px 0;
+      }
+
+      .hero h1 {
+        font-size: 3.25rem;
+      }
+
+      .stats {
+        gap: 8px;
+      }
+
+      .stat {
+        padding: 13px;
+      }
+
+      .stat b {
+        font-size: 1.25rem;
+      }
+
+      .stat span {
+        font-size: .72rem;
+      }
+
+      .skills-grid,
+      .projects-grid,
+      .cert-grid,
+      .quote-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-actions .btn {
+        display: none;
+      }
+
+      .hero-buttons .btn {
+        width: 100%;
+      }
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home" aria-label="VN Digital home">
+      VN<span>.</span> DIGITAL
+    </a>
+
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#skills">Expertise</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle light and dark theme">☼</button>
+      <a class="btn btn-primary" href="#contact">Let's talk ↗</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+    <div class="container">
+
+      <div class="hero-grid">
+
+        <div>
+          <div class="availability">
+            <span class="dot"></span>
+            Open to meaningful opportunities
+          </div>
+
+          <p class="eyebrow">Welcome to VN Digital</p>
+
+          <h1>
+            Ideas into<br>
+            <span class="gradient">digital impact.</span>
+          </h1>
+
+          <p class="hero-copy">
+            I'm <strong>Victor N.</strong> — a Frontend Developer,
+            UI/UX Designer and AI Specialist focused on creating
+            thoughtful, accessible and future-ready digital experiences.
+          </p>
+
+          <div class="hero-buttons">
+            <a class="btn btn-primary" href="#projects">Explore my work ↗</a>
+          </div>
+
+          <div class="quick-links">
+            <a href="#about">Discover my story ↓</a>
+            <a href="https://github.com/" target="_blank" rel="noopener">GitHub ↗</a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          </div>
+        </div>
+
+        <div class="portrait-wrap">
+          <div class="portrait">
+            <!-- Add your portrait later at assets/hero-portrait.jpg -->
+            <div class="portrait-placeholder">
+              <div class="camera">＋</div>
+              <strong>Your professional portrait</strong>
+              <span>Add image at <code>assets/hero-portrait.jpg</code></span>
+            </div>
+          </div>
+
+          <div class="float-card">
+            <b>20+ years</b>
+            Professional experience
+          </div>
+        </div>
+
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <b>20+</b>
+          <span>Years of professional experience</span>
+        </div>
+
+        <div class="stat">
+          <b>3</b>
+          <span>Core areas of focus</span>
+        </div>
+
+        <div class="stat">
+          <b>2028</b>
+          <span>Expected graduation</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="section light-section" id="about">
+    <div class="container about-grid reveal">
+
+      <div>
+        <p class="eyebrow">A little about me</p>
+        <h2 class="section-title">
+          Technology with <span class="gradient">purpose.</span>
+        </h2>
+
+        <p class="section-intro">
+          I bring a broad professional perspective to digital problem-solving,
+          combining frontend development, user-centred design and the practical
+          possibilities of artificial intelligence.
+        </p>
+      </div>
+
+      <div class="about-card">
+        <h3>My approach</h3>
+
+        <p>
+          I value clarity, usability, continuous learning and solutions
+          that make a meaningful difference. My work is guided by curiosity,
+          thoughtful execution and a commitment to building reliable
+          digital experiences.
+        </p>
+
+        <div class="pill-row">
+          <span class="pill">User-focused</span>
+          <span class="pill">Problem solver</span>
+          <span class="pill">Continuous learner</span>
+          <span class="pill">Technology-driven</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section class="section" id="skills">
+    <div class="container">
+
+      <p class="eyebrow">What I work with</p>
+
+      <h2 class="section-title">
+        Skills & <span class="gradient">expertise.</span>
+      </h2>
+
+      <p class="section-intro">
+        A multidisciplinary toolkit spanning interface development,
+        design, modern workflows and AI-enabled problem-solving.
+      </p>
+
+      <div class="skills-grid">
+
+        <article class="skill-card reveal">
+          <div class="skill-icon">⌘</div>
+          <h3>Frontend Development</h3>
+          <p>
+            HTML5, CSS3, JavaScript, semantic markup,
+            responsive layouts and interactive web experiences.
+          </p>
+        </article>
+
+        <article class="skill-card reveal">
+          <div class="skill-icon">✳</div>
+          <h3>UI/UX Design</h3>
+          <p>
+            User-centred design, wireframing, visual hierarchy,
+            accessibility and intuitive interfaces.
+          </p>
+        </article>
+
+        <article class="skill-card reveal">
+          <div class="skill-icon">◈</div>
+          <h3>Artificial Intelligence</h3>
+          <p>
+            AI concepts, practical AI tools, workflow exploration
+            and responsible adoption.
+          </p>
+        </article>
+
+        <article class="skill-card reveal">
+          <div class="skill-icon">✎</div>
+          <h3>Prompt Engineering</h3>
+          <p>
+            Structured prompting, task design, iteration
+            and clear human-AI communication.
+          </p>
+        </article>
+
+        <article class="skill-card reveal">
+          <div class="skill-icon">⌁</div>
+          <h3>AI Automation</h3>
+          <p>
+            Exploring automation workflows that reduce repetitive
+            work and improve efficiency.
+          </p>
+        </article>
+
+        <article class="skill-card reveal">
+          <div class="skill-icon">⌘</div>
+          <h3>Tools & IT</h3>
+          <p>
+            Git, GitHub, technical support, IT support
+            and practical digital troubleshooting.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE SECTION -->
+  <section class="section light-section" id="experience">
+    <div class="container reveal">
+
+      <p class="eyebrow">Professional journey</p>
+
+      <h2 class="section-title">
+        Experience & <span class="gradient">development.</span>
+      </h2>
+
+      <p class="section-intro">
+        A career shaped by more than two decades of professional experience.
+        Add specific roles, organisations and dates below to make this
+        timeline a detailed record.
+      </p>
+
+      <div class="timeline">
+
+        <article class="timeline-card">
+          <span class="date">20+ years · Professional experience</span>
+          <h3>Professional Practice & Development</h3>
+          <p>
+            Broad professional experience across technology and related work.
+            Add your verified job titles, employers, responsibilities
+            and achievements here.
+          </p>
+          <span class="tag">Career experience</span>
+        </article>
+
+        <article class="timeline-card">
+          <span class="date">Current · Ongoing</span>
+          <h3>Frontend Development, UI/UX & AI</h3>
+          <p>
+            Continuously developing practical skills in modern frontend
+            technologies, user experience, prompt engineering
+            and AI-assisted workflows.
+          </p>
+          <span class="tag">Professional development</span>
+        </article>
+
+        <article class="timeline-card">
+          <span class="date">In progress</span>
+          <h3>ITF Level 3 Specialist</h3>
+          <p>
+            Professional training currently in progress. Update this entry
+            with the official programme name, provider and completion date
+            when awarded.
+          </p>
+          <span class="tag">Training in progress</span>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section class="section" id="projects">
+    <div class="container">
+
+      <p class="eyebrow">Selected work</p>
+
+      <h2 class="section-title">
+        Projects & <span class="gradient">experiments.</span>
+      </h2>
+
+      <p class="section-intro">
+        A space for completed work, personal builds and practical experiments.
+        Replace these sample cards with your real projects when ready.
+      </p>
+
+      <div class="filter-row" role="group" aria-label="Filter projects">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="web">Web development</button>
+        <button class="filter" data-filter="design">UI/UX</button>
+        <button class="filter" data-filter="ai">AI & automation</button>
+      </div>
+
+      <div class="projects-grid">
+
+        <article class="project-card reveal" data-category="web">
+          <div class="project-visual">＋</div>
+          <h3>Project title goes here</h3>
+          <p>
+            Add a concise overview of the challenge,
+            your contribution and the result.
+          </p>
+          <span class="tag">HTML · CSS · JavaScript</span>
+          <div class="project-actions">
+            <a class="text-link" href="#" aria-label="Add live project link">Live project ↗</a>
+            <a class="text-link" href="#" aria-label="Add project details">Details ↗</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="design">
+          <div class="project-visual">◫</div>
+          <h3>Design case study</h3>
+          <p>
+            Showcase a user interface, prototype
+            or design process with a short explanation.
+          </p>
+          <span class="tag">UI/UX · Prototyping</span>
+          <div class="project-actions">
+            <a class="text-link" href="#">View case study ↗</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="ai">
+          <div class="project-visual">✳</div>
+          <h3>AI workflow experiment</h3>
+          <p>
+            Describe an AI or automation project,
+            the tools used and the value it created.
+          </p>
+          <span class="tag">AI · Prompting</span>
+          <div class="project-actions">
+            <a class="text-link" href="#">Explore project ↗</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION AND CERTIFICATIONS -->
+  <section class="section light-section" id="credentials">
+    <div class="container">
+
+      <p class="eyebrow">Learning & qualifications</p>
+
+      <h2 class="section-title">
+        Education & <span class="gradient">certifications.</span>
+      </h2>
+
+      <div class="timeline">
+
+        <article class="timeline-card">
+          <span class="date">Expected 2028 · 300 Level</span>
+          <h3>B.Sc. Computer Science</h3>
+          <p>
+            Ignatius Ajuru University of Education —
+            currently pursuing studies in Computer Science.
+          </p>
+          <span class="tag">Undergraduate education</span>
+        </article>
+
+      </div>
+
+      <div class="cert-grid">
+
+        <article class="cert-card">
+          <small>In progress</small>
+          <h3>ITF Level 3 Specialist</h3>
+          <p>
+            Professional training currently underway.
+            Add the awarding body, certificate reference and verification
+            link after successful completion.
+          </p>
+        </article>
+
+        <article class="cert-card">
+          <small>Archive placeholder</small>
+          <h3>Additional certification</h3>
+          <p>
+            Add the certification title, issuing organisation,
+            date awarded and certificate verification link.
+          </p>
+        </article>
+
+        <article class="cert-card">
+          <small>Professional training</small>
+          <h3>Training & workshops</h3>
+          <p>
+            Record relevant courses, workshops
+            and professional development programmes here.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS SECTION -->
+  <section class="section" id="testimonials">
+    <div class="container">
+
+      <p class="eyebrow">Words from others</p>
+
+      <h2 class="section-title">
+        Testimonials & <span class="gradient">recommendations.</span>
+      </h2>
+
+      <p class="section-intro">
+        Add genuine feedback from clients, colleagues, mentors
+        or collaborators—with their permission.
+      </p>
+
+      <div class="quote-grid">
+
+        <article class="quote-card reveal">
+          <p>
+            “Add an authentic recommendation that describes
+            the work, collaboration or impact.”
+          </p>
+          <b>— Name</b>
+          <span class="muted">Role / Organisation</span>
+        </article>
+
+        <article class="quote-card reveal">
+          <p>
+            “Use a concise testimonial that gives visitors
+            a clear sense of your professional strengths.”
+          </p>
+          <b>— Name</b>
+          <span class="muted">Role / Organisation</span>
+        </article>
+
+        <article class="quote-card reveal">
+          <p>
+            “Replace this placeholder with a real,
+            approved testimonial.”
+          </p>
+          <b>— Name</b>
+          <span class="muted">Role / Organisation</span>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="section light-section" id="contact">
+    <div class="container">
+
+      <p class="eyebrow">Start a conversation</p>
+
+      <h2 class="section-title">
+        Have an idea? <span class="gradient">Let's connect.</span>
+      </h2>
+
+      <p class="section-intro">
+        For professional enquiries, collaborations, opportunities
+        or a conversation about technology, send a message.
+      </p>
+
+      <div class="contact-grid">
+
+        <div>
+          <h3>Contact details</h3>
+
+          <p class="muted">
+            I welcome thoughtful conversations and opportunities
+            to create useful digital experiences.
+          </p>
+
+          <div class="contact-details">
+
+            <div class="contact-item">
+              <small>Email</small>
+              <strong id="emailDisplay">your-email@example.com</strong>
+            </div>
+
+            <div class="contact-item">
+              <small>Location</small>
+              <strong>Port Harcourt, Rivers State, Nigeria</strong>
+            </div>
+
+            <div class="contact-item">
+              <small>Professional links</small>
+              <div class="socials">
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn ↗</a>
+                <a href="https://github.com/" target="_blank" rel="noopener">GitHub ↗</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+
+          <div class="field">
+            <label for="senderName">Your name</label>
+            <input id="senderName" name="name" required placeholder="Full name">
+          </div>
+
+          <div class="field">
+            <label for="senderEmail">Your email</label>
+            <input id="senderEmail" name="email" type="email" required placeholder="you@example.com">
+          </div>
+
+          <div class="field">
+            <label for="subject">Subject</label>
+            <input id="subject" name="subject" required placeholder="How can I help?">
+          </div>
+
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required placeholder="Write your message..."></textarea>
+          </div>
+
+          <button class="btn btn-primary" type="submit">
+            Open email app ↗
+          </button>
+
+          <p class="form-note">
+            This form opens your device's default email app with your message prepared.
+            It does not send or store messages on this website.
+          </p>
+
+          <p class="form-note" id="formStatus" aria-live="polite"></p>
+
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container footer-row">
+
+    <span>
+      © <span id="year"></span> Victor N. · VN Digital. All rights reserved.
+    </span>
+
+    <span>Designed with purpose. Built for what’s next.</span>
+
+    <div class="socials">
+      <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+
+  </div>
+</footer>
+
+<button id="topBtn" aria-label="Back to top">↑</button>
+
+<script>
+  // Add your professional email address here when you have one.
+  const PORTFOLIO_EMAIL = "your-email@example.com";
+
+  // MOBILE NAVIGATION
+  const menuBtn = document.getElementById("menuBtn");
+  const navLinks = document.getElementById("navLinks");
+
+  menuBtn.addEventListener("click", () => {
+    const open = navLinks.classList.toggle("open");
+
+    menuBtn.setAttribute("aria-expanded", String(open));
+    menuBtn.textContent = open ? "×" : "☰";
+  });
+
+  navLinks.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("open");
+      menuBtn.setAttribute("aria-expanded", "false");
+      menuBtn.textContent = "☰";
+    });
+  });
+
+  // DARK AND LIGHT MODE
+  const themeToggle = document.getElementById("themeToggle");
+  const savedTheme = localStorage.getItem("vn-theme");
+
+  if (savedTheme === "light") {
+    document.body.classList.add("light");
+  }
+
+  themeToggle.textContent =
+    document.body.classList.contains("light") ? "☾" : "☼";
+
+  themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("light");
+
+    const theme = document.body.classList.contains("light")
+      ? "light"
+      : "dark";
+
+    localStorage.setItem("vn-theme", theme);
+
+    themeToggle.textContent = theme === "light" ? "☾" : "☼";
+  });
+
+  // CURRENT YEAR AND EMAIL DISPLAY
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+  document.getElementById("emailDisplay").textContent =
+    PORTFOLIO_EMAIL;
+
+  // CONTACT FORM
+  document.getElementById("contactForm").addEventListener("submit", event => {
+    event.preventDefault();
+
+    if (PORTFOLIO_EMAIL === "your-email@example.com") {
+      document.getElementById("formStatus").textContent =
+        "Please add your professional email in the PORTFOLIO_EMAIL setting in this file before publishing.";
+      return;
+    }
+
+    const data = new FormData(event.currentTarget);
+
+    const name = data.get("name").trim();
+    const sender = data.get("email").trim();
+    const subject = encodeURIComponent(data.get("subject").trim());
+
+    const body = encodeURIComponent(
+      `Hello Victor,\n\n${data.get("message").trim()}\n\nRegards,\n${name}\n${sender}`
+    );
+
+    window.location.href =
+      `mailto:${PORTFOLIO_EMAIL}?subject=${subject}&body=${body}`;
+  });
+
+  // PROJECT FILTERING
+  document.querySelectorAll(".filter").forEach(button => {
+    button.addEventListener("click", () => {
+
+      document.querySelectorAll(".filter").forEach(item => {
+        item.classList.remove("active");
+      });
+
+      button.classList.add("active");
+
+      const filter = button.dataset.filter;
+
+      document.querySelectorAll(".project-card").forEach(card => {
+        card.style.display =
+          filter === "all" || card.dataset.category === filter
+            ? ""
+            : "none";
+      });
+    });
+  });
+
+  // SCROLL REVEAL ANIMATION
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.12
+  });
+
+  document.querySelectorAll(".reveal").forEach(element => {
+    observer.observe(element);
+  });
+
+  // BACK TO TOP BUTTON
+  const topBtn = document.getElementById("topBtn");
+
+  window.addEventListener("scroll", () => {
+    topBtn.style.display =
+      window.scrollY > 500 ? "block" : "none";
+  });
+
+  topBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
+
+</body>
+</html>

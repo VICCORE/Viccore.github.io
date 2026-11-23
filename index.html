@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#081326">
-  <meta name="description" content="Victor N. — Frontend Developer, UI/UX Designer and AI Specialist. Explore professional experience, skills, education and work.">
+  <meta name="description" content="Victor N. — Frontend Developer, UI/UX Designer and AI Specialist.">
   <meta property="og:title" content="Victor N. | VN Digital">
   <meta property="og:description" content="Frontend Developer | UI/UX Designer | AI Specialist">
   <meta property="og:type" content="website">
+
   <title>Victor N. | VN Digital — Digital Portfolio</title>
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
   <style>
     :root {
@@ -28,7 +28,7 @@
 
     body.light {
       --bg: #f4f7fc;
-      --panel: #fff;
+      --panel: #ffffff;
       --panel2: #eaf0f8;
       --text: #142238;
       --muted: #60718a;
@@ -198,6 +198,17 @@
     .btn-outline:hover {
       border-color: var(--cyan);
       color: var(--cyan);
+    }
+
+    .btn-whatsapp {
+      background: #20c66b;
+      color: white;
+      box-shadow: 0 10px 25px rgba(32,198,107,.2);
+    }
+
+    .btn-whatsapp:hover {
+      background: #16a85a;
+      transform: translateY(-3px);
     }
 
     .hero {
@@ -406,6 +417,7 @@
     }
 
     .skill-card,
+    .project-card,
     .timeline-card {
       background: var(--panel);
       border: 1px solid var(--line);
@@ -414,7 +426,8 @@
       transition: transform .25s, border-color .25s;
     }
 
-    .skill-card:hover {
+    .skill-card:hover,
+    .project-card:hover {
       transform: translateY(-5px);
       border-color: var(--blue);
     }
@@ -473,6 +486,168 @@
       border-radius: 30px;
     }
 
+    .filter-row {
+      display: flex;
+      gap: 9px;
+      flex-wrap: wrap;
+      margin: 30px 0;
+    }
+
+    .filter {
+      padding: 8px 15px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: transparent;
+      color: var(--muted);
+    }
+
+    .filter.active,
+    .filter:hover {
+      background: var(--blue);
+      border-color: var(--blue);
+      color: #fff;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 35px;
+    }
+
+    .project-card {
+      padding: 20px;
+    }
+
+    .project-visual {
+      height: 210px;
+      border-radius: 15px;
+      margin-bottom: 18px;
+      overflow: hidden;
+      position: relative;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, #0c1e3c, #153d69 55%, #07152a);
+      border: 1px solid rgba(85,216,232,.3);
+    }
+
+    .ai-visual {
+      isolation: isolate;
+    }
+
+    .ai-visual:before,
+    .ai-visual:after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(1px);
+      z-index: -1;
+    }
+
+    .ai-visual:before {
+      width: 190px;
+      height: 190px;
+      background: rgba(67,140,255,.32);
+      left: -40px;
+      top: -70px;
+    }
+
+    .ai-visual:after {
+      width: 180px;
+      height: 180px;
+      background: rgba(85,216,232,.22);
+      right: -40px;
+      bottom: -80px;
+    }
+
+    .ai-interface {
+      width: min(82%, 390px);
+      padding: 17px;
+      border: 1px solid rgba(255,255,255,.22);
+      border-radius: 17px;
+      background: rgba(5,17,37,.78);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 15px 45px rgba(0,0,0,.35);
+    }
+
+    .ai-top {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      color: #eaf7ff;
+      font-size: .8rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+
+    .ai-orb {
+      width: 27px;
+      height: 27px;
+      display: grid;
+      place-items: center;
+      border-radius: 9px;
+      color: #071326;
+      background: linear-gradient(135deg, #55d8e8, #438cff);
+      box-shadow: 0 0 18px rgba(85,216,232,.45);
+    }
+
+    .ai-message {
+      padding: 10px 12px;
+      border-radius: 12px;
+      color: #dcecff;
+      background: rgba(255,255,255,.08);
+      font-size: .72rem;
+      margin-bottom: 9px;
+    }
+
+    .ai-message.answer {
+      border: 1px solid rgba(85,216,232,.28);
+      background: rgba(67,140,255,.14);
+      margin-left: 25px;
+    }
+
+    .ai-input {
+      height: 29px;
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 9px;
+      margin-top: 13px;
+      color: #8ca7c5;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 10px;
+      font-size: .65rem;
+    }
+
+    .ai-input span:last-child {
+      color: #55d8e8;
+      font-size: .9rem;
+    }
+
+    .project-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 7px;
+    }
+
+    .project-card p {
+      color: var(--muted);
+      font-size: .88rem;
+      margin: 8px 0;
+    }
+
+    .project-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 16px;
+      flex-wrap: wrap;
+    }
+
+    .text-link {
+      font-size: .82rem;
+      color: var(--cyan);
+      font-weight: 750;
+    }
+
     .cert-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -523,6 +698,18 @@
     .contact-item small {
       color: var(--muted);
       display: block;
+      margin-bottom: 5px;
+    }
+
+    .contact-item a:hover {
+      color: var(--cyan);
+    }
+
+    .website-address {
+      display: inline-block;
+      color: var(--cyan);
+      font-weight: 800;
+      margin-top: 5px;
     }
 
     .contact-form {
@@ -696,6 +883,7 @@
       }
 
       .skills-grid,
+      .projects-grid,
       .cert-grid {
         grid-template-columns: 1fr;
       }
@@ -725,6 +913,7 @@
 
 <header>
   <div class="container nav">
+
     <a class="brand" href="#home" aria-label="VN Digital home">
       VN<span>.</span> DIGITAL
     </a>
@@ -743,6 +932,7 @@
       <a class="btn btn-primary" href="#contact">Let's talk ↗</a>
       <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
     </div>
+
   </div>
 </header>
 
@@ -753,7 +943,9 @@
     <div class="container">
 
       <div class="hero-grid">
+
         <div>
+
           <div class="availability">
             <span class="dot"></span>
             Open to meaningful opportunities
@@ -774,16 +966,20 @@
 
           <div class="hero-buttons">
             <a class="btn btn-primary" href="#projects">Explore my work ↗</a>
+            <a class="btn btn-whatsapp" href="https://wa.me/2349161668124" target="_blank" rel="noopener">
+              WhatsApp me ↗
+            </a>
           </div>
 
           <div class="quick-links">
             <a href="#about">Discover my story ↓</a>
             <a href="mailto:victornwabuwa728@gmail.com">Email me ↗</a>
-            <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn ↗</a>
           </div>
+
         </div>
 
         <div class="portrait-wrap">
+
           <div class="portrait">
             <img
               src="assets/3F07CB16-2E53-49C1-9CB3-EBEF2276047E.png"
@@ -796,10 +992,13 @@
             <b>20+ years</b>
             Professional experience
           </div>
+
         </div>
+
       </div>
 
       <div class="stats">
+
         <div class="stat">
           <b>20+</b>
           <span>Years of professional experience</span>
@@ -814,6 +1013,7 @@
           <b>2028</b>
           <span>Expected graduation</span>
         </div>
+
       </div>
 
     </div>
@@ -824,6 +1024,7 @@
     <div class="container about-grid reveal">
 
       <div>
+
         <p class="eyebrow">A little about me</p>
 
         <h2 class="section-title">
@@ -835,9 +1036,11 @@
           combining frontend development, user-centred design and the practical
           possibilities of artificial intelligence.
         </p>
+
       </div>
 
       <div class="about-card">
+
         <h3>My approach</h3>
 
         <p>
@@ -853,6 +1056,7 @@
           <span class="pill">Continuous learner</span>
           <span class="pill">Technology-driven</span>
         </div>
+
       </div>
 
     </div>
@@ -944,7 +1148,7 @@
       </h2>
 
       <p class="section-intro">
-        A career shaped by more than two decades of professional experience.
+        A career shaped by professional experience and continuous development.
         Specific roles, organisations and dates can be added to make this
         timeline a detailed record.
       </p>
@@ -999,18 +1203,67 @@
       </h2>
 
       <p class="section-intro">
-        This section will showcase completed websites, design work
-        and practical technology projects as they are added.
+        A showcase of digital concepts, practical experiments
+        and technology-focused ideas.
       </p>
 
-      <div class="project-empty">
-        <div class="project-empty-icon">✦</div>
-        <h3>Projects coming soon</h3>
-        <p>
-          New work and practical projects will be featured here.
-          Check back for updates.
-        </p>
+      <div class="projects-grid">
+
+        <!-- AI PROJECT -->
+        <article class="project-card reveal">
+
+          <div class="project-visual ai-visual">
+
+            <div class="ai-interface">
+
+              <div class="ai-top">
+                <span class="ai-orb">✦</span>
+                VN AI ASSISTANT
+              </div>
+
+              <div class="ai-message">
+                Hello! How can I help you today?
+              </div>
+
+              <div class="ai-message answer">
+                I can help with ideas, information and everyday digital tasks.
+              </div>
+
+              <div class="ai-input">
+                <span>Ask your assistant...</span>
+                <span>➤</span>
+              </div>
+
+            </div>
+
+          </div>
+
+          <h3>AI-Powered Digital Assistant</h3>
+
+          <p>
+            A conceptual AI assistant interface designed to demonstrate
+            how artificial intelligence can support everyday digital tasks,
+            provide helpful information and simplify user interactions.
+          </p>
+
+          <div class="pill-row">
+            <span class="pill">Artificial Intelligence</span>
+            <span class="pill">UI/UX Design</span>
+            <span class="pill">Automation Concept</span>
+          </div>
+
+          <div class="project-actions">
+            <span class="text-link">Concept project · UI demonstration</span>
+          </div>
+
+        </article>
+
       </div>
+
+      <p class="section-intro" style="margin-top:25px;font-size:.85rem;">
+        Note: The AI assistant shown here is a portfolio concept and visual
+        demonstration, not a deployed AI application.
+      </p>
 
     </div>
   </section>
@@ -1052,6 +1305,7 @@
         </article>
 
       </div>
+
     </div>
   </section>
 
@@ -1067,12 +1321,13 @@
 
       <p class="section-intro">
         For professional enquiries, collaborations, opportunities
-        or a conversation about technology, send a message.
+        or a conversation about technology, get in touch.
       </p>
 
       <div class="contact-grid">
 
         <div>
+
           <h3>Contact details</h3>
 
           <p class="muted">
@@ -1090,40 +1345,82 @@
             </div>
 
             <div class="contact-item">
+              <small>WhatsApp</small>
+              <a
+                href="https://wa.me/2349161668124"
+                target="_blank"
+                rel="noopener"
+                class="btn btn-whatsapp"
+              >
+                Chat with me on WhatsApp ↗
+              </a>
+              <div style="margin-top:9px;">
+                <strong>+234 916 166 8124</strong>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <small>Website</small>
+              <a
+                class="website-address"
+                href="https://www.vn.digital.com"
+                target="_blank"
+                rel="noopener"
+              >
+                www.Vn.digital.com ↗
+              </a>
+            </div>
+
+            <div class="contact-item">
               <small>Location</small>
               <strong>Port Harcourt, Rivers State, Nigeria</strong>
             </div>
 
-            <div class="contact-item">
-              <small>Professional links</small>
-              <div class="socials">
-                <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn ↗</a>
-              </div>
-            </div>
-
           </div>
+
         </div>
 
         <form class="contact-form" id="contactForm">
 
           <div class="field">
             <label for="senderName">Your name</label>
-            <input id="senderName" name="name" required placeholder="Full name">
+            <input
+              id="senderName"
+              name="name"
+              required
+              placeholder="Full name"
+            >
           </div>
 
           <div class="field">
             <label for="senderEmail">Your email</label>
-            <input id="senderEmail" name="email" type="email" required placeholder="you@example.com">
+            <input
+              id="senderEmail"
+              name="email"
+              type="email"
+              required
+              placeholder="you@example.com"
+            >
           </div>
 
           <div class="field">
             <label for="subject">Subject</label>
-            <input id="subject" name="subject" required placeholder="How can I help?">
+            <input
+              id="subject"
+              name="subject"
+              required
+              placeholder="How can I help?"
+            >
           </div>
 
           <div class="field">
             <label for="message">Message</label>
-            <textarea id="message" name="message" required placeholder="Write your message..."></textarea>
+            <textarea
+              id="message"
+              name="message"
+              required
+              placeholder="Write your message..."
+            ></textarea>
           </div>
 
           <button class="btn btn-primary" type="submit">
@@ -1131,13 +1428,14 @@
           </button>
 
           <p class="form-note">
-            This form opens your device's default email app with your message prepared.
-            It does not send or store messages on this website.
+            This form opens your device's default email app with your message
+            prepared. It does not send or store messages on this website.
           </p>
 
           <p class="form-note" id="formStatus" aria-live="polite"></p>
 
         </form>
+
       </div>
     </div>
   </section>
@@ -1152,11 +1450,11 @@
       © <span id="year"></span> Victor N. · VN Digital. All rights reserved.
     </span>
 
-    <span>Designed with purpose. Built for what’s next.</span>
+    <span>Designed with purpose. Built for what's next.</span>
 
     <div class="socials">
       <a href="mailto:victornwabuwa728@gmail.com">Email</a>
-      <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://wa.me/2349161668124" target="_blank" rel="noopener">WhatsApp ↗</a>
     </div>
 
   </div>
@@ -1165,8 +1463,11 @@
 <button id="topBtn" aria-label="Back to top">↑</button>
 
 <script>
-  // YOUR PROFESSIONAL EMAIL ADDRESS
+  // PROFESSIONAL EMAIL ADDRESS
   const PORTFOLIO_EMAIL = "victornwabuwa728@gmail.com";
+
+  // WHATSAPP NUMBER
+  const WHATSAPP_NUMBER = "2349161668124";
 
   // MOBILE NAVIGATION
   const menuBtn = document.getElementById("menuBtn");

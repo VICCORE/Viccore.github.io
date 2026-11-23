@@ -304,26 +304,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center 25%;
       display: block;
-    }
-
-    .portrait-placeholder {
-      text-align: center;
-      padding: 30px;
-      color: var(--muted);
-    }
-
-    .portrait-placeholder strong {
-      display: block;
-      color: var(--text);
-      font-size: 1.1rem;
-      margin: 12px 0 4px;
-    }
-
-    .portrait-placeholder .camera {
-      font-size: 3rem;
-      color: var(--cyan);
     }
 
     .float-card {
@@ -425,9 +406,7 @@
     }
 
     .skill-card,
-    .project-card,
-    .timeline-card,
-    .quote-card {
+    .timeline-card {
       background: var(--panel);
       border: 1px solid var(--line);
       border-radius: 18px;
@@ -435,8 +414,7 @@
       transition: transform .25s, border-color .25s;
     }
 
-    .skill-card:hover,
-    .project-card:hover {
+    .skill-card:hover {
       transform: translateY(-5px);
       border-color: var(--blue);
     }
@@ -495,71 +473,7 @@
       border-radius: 30px;
     }
 
-    .filter-row {
-      display: flex;
-      gap: 9px;
-      flex-wrap: wrap;
-      margin: 30px 0;
-    }
-
-    .filter {
-      padding: 8px 15px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: transparent;
-      color: var(--muted);
-    }
-
-    .filter.active,
-    .filter:hover {
-      background: var(--blue);
-      border-color: var(--blue);
-      color: #fff;
-    }
-
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .project-visual {
-      height: 175px;
-      border-radius: 13px;
-      background: linear-gradient(135deg, rgba(67,140,255,.22), rgba(85,216,232,.08));
-      display: grid;
-      place-items: center;
-      color: var(--cyan);
-      font-size: 2.2rem;
-      margin-bottom: 18px;
-      border: 1px dashed rgba(85,216,232,.3);
-    }
-
-    .project-card p {
-      color: var(--muted);
-      font-size: .88rem;
-      margin: 8px 0;
-    }
-
-    .project-card h3 {
-      font-size: 1.08rem;
-    }
-
-    .project-actions {
-      display: flex;
-      gap: 10px;
-      margin-top: 16px;
-      flex-wrap: wrap;
-    }
-
-    .text-link {
-      font-size: .82rem;
-      color: var(--cyan);
-      font-weight: 750;
-    }
-
-    .cert-grid,
-    .quote-grid {
+    .cert-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 17px;
@@ -584,16 +498,6 @@
       color: var(--muted);
       font-size: .87rem;
       margin-top: 8px;
-    }
-
-    .quote-card p {
-      color: var(--muted);
-      font-style: italic;
-    }
-
-    .quote-card b {
-      display: block;
-      margin-top: 17px;
     }
 
     .contact-grid {
@@ -757,9 +661,7 @@
       }
 
       .skills-grid,
-      .projects-grid,
-      .cert-grid,
-      .quote-grid {
+      .cert-grid {
         grid-template-columns: repeat(2, 1fr);
       }
     }
@@ -794,9 +696,7 @@
       }
 
       .skills-grid,
-      .projects-grid,
-      .cert-grid,
-      .quote-grid {
+      .cert-grid {
         grid-template-columns: 1fr;
       }
 
@@ -853,7 +753,6 @@
     <div class="container">
 
       <div class="hero-grid">
-
         <div>
           <div class="availability">
             <span class="dot"></span>
@@ -886,10 +785,9 @@
 
         <div class="portrait-wrap">
           <div class="portrait">
-            <!-- Professional portrait uploaded to the assets folder -->
             <img
-              src="assets/hero-portrait.png"
-              alt="Victor N. - VN Digital professional portrait"
+              src="assets/3F07CB16-2E53-49C1-9CB3-EBEF2276047E.png"
+              alt="Professional portrait of Victor N."
               loading="eager"
             >
           </div>
@@ -899,7 +797,6 @@
             Professional experience
           </div>
         </div>
-
       </div>
 
       <div class="stats">
@@ -928,6 +825,7 @@
 
       <div>
         <p class="eyebrow">A little about me</p>
+
         <h2 class="section-title">
           Technology with <span class="gradient">purpose.</span>
         </h2>
@@ -1026,7 +924,7 @@
           <div class="skill-icon">⌘</div>
           <h3>Tools & IT</h3>
           <p>
-            Git, GitHub, technical support, IT support
+            Technical support, IT support
             and practical digital troubleshooting.
           </p>
         </article>
@@ -1047,7 +945,7 @@
 
       <p class="section-intro">
         A career shaped by more than two decades of professional experience.
-        Add specific roles, organisations and dates below to make this
+        Specific roles, organisations and dates can be added to make this
         timeline a detailed record.
       </p>
 
@@ -1058,8 +956,8 @@
           <h3>Professional Practice & Development</h3>
           <p>
             Broad professional experience across technology and related work.
-            Add your verified job titles, employers, responsibilities
-            and achievements here.
+            Specific job titles, employers, responsibilities
+            and achievements can be added here.
           </p>
           <span class="tag">Career experience</span>
         </article>
@@ -1079,9 +977,9 @@
           <span class="date">In progress</span>
           <h3>ITF Level 3 Specialist</h3>
           <p>
-            Professional training currently in progress. Update this entry
-            with the official programme name, provider and completion date
-            when awarded.
+            Professional training currently in progress.
+            The official programme name, provider and completion date
+            can be added when awarded.
           </p>
           <span class="tag">Training in progress</span>
         </article>
@@ -1101,60 +999,19 @@
       </h2>
 
       <p class="section-intro">
-        A space for completed work, personal builds and practical experiments.
-        Replace these sample cards with your real projects when ready.
+        This section will showcase completed websites, design work
+        and practical technology projects as they are added.
       </p>
 
-      <div class="filter-row" role="group" aria-label="Filter projects">
-        <button class="filter active" data-filter="all">All</button>
-        <button class="filter" data-filter="web">Web development</button>
-        <button class="filter" data-filter="design">UI/UX</button>
-        <button class="filter" data-filter="ai">AI & automation</button>
+      <div class="project-empty">
+        <div class="project-empty-icon">✦</div>
+        <h3>Projects coming soon</h3>
+        <p>
+          New work and practical projects will be featured here.
+          Check back for updates.
+        </p>
       </div>
 
-      <div class="projects-grid">
-
-        <article class="project-card reveal" data-category="web">
-          <div class="project-visual">＋</div>
-          <h3>Project title goes here</h3>
-          <p>
-            Add a concise overview of the challenge,
-            your contribution and the result.
-          </p>
-          <span class="tag">HTML · CSS · JavaScript</span>
-          <div class="project-actions">
-            <a class="text-link" href="#">Live project ↗</a>
-            <a class="text-link" href="#">Details ↗</a>
-          </div>
-        </article>
-
-        <article class="project-card reveal" data-category="design">
-          <div class="project-visual">◫</div>
-          <h3>Design case study</h3>
-          <p>
-            Showcase a user interface, prototype
-            or design process with a short explanation.
-          </p>
-          <span class="tag">UI/UX · Prototyping</span>
-          <div class="project-actions">
-            <a class="text-link" href="#">View case study ↗</a>
-          </div>
-        </article>
-
-        <article class="project-card reveal" data-category="ai">
-          <div class="project-visual">✳</div>
-          <h3>AI workflow experiment</h3>
-          <p>
-            Describe an AI or automation project,
-            the tools used and the value it created.
-          </p>
-          <span class="tag">AI · Prompting</span>
-          <div class="project-actions">
-            <a class="text-link" href="#">Explore project ↗</a>
-          </div>
-        </article>
-
-      </div>
     </div>
   </section>
 
@@ -1189,75 +1046,9 @@
           <h3>ITF Level 3 Specialist</h3>
           <p>
             Professional training currently underway.
-            Add the awarding body, certificate reference and verification
-            link after successful completion.
+            The awarding body and certificate details can be added
+            after successful completion.
           </p>
-        </article>
-
-        <article class="cert-card">
-          <small>Archive placeholder</small>
-          <h3>Additional certification</h3>
-          <p>
-            Add the certification title, issuing organisation,
-            date awarded and certificate verification link.
-          </p>
-        </article>
-
-        <article class="cert-card">
-          <small>Professional training</small>
-          <h3>Training & workshops</h3>
-          <p>
-            Record relevant courses, workshops
-            and professional development programmes here.
-          </p>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS SECTION -->
-  <section class="section" id="testimonials">
-    <div class="container">
-
-      <p class="eyebrow">Words from others</p>
-
-      <h2 class="section-title">
-        Testimonials & <span class="gradient">recommendations.</span>
-      </h2>
-
-      <p class="section-intro">
-        Add genuine feedback from clients, colleagues, mentors
-        or collaborators—with their permission.
-      </p>
-
-      <div class="quote-grid">
-
-        <article class="quote-card reveal">
-          <p>
-            “Add an authentic recommendation that describes
-            the work, collaboration or impact.”
-          </p>
-          <b>— Name</b>
-          <span class="muted">Role / Organisation</span>
-        </article>
-
-        <article class="quote-card reveal">
-          <p>
-            “Use a concise testimonial that gives visitors
-            a clear sense of your professional strengths.”
-          </p>
-          <b>— Name</b>
-          <span class="muted">Role / Organisation</span>
-        </article>
-
-        <article class="quote-card reveal">
-          <p>
-            “Replace this placeholder with a real,
-            approved testimonial.”
-          </p>
-          <b>— Name</b>
-          <span class="muted">Role / Organisation</span>
         </article>
 
       </div>
@@ -1439,27 +1230,6 @@
 
     window.location.href =
       `mailto:${PORTFOLIO_EMAIL}?subject=${subject}&body=${body}`;
-  });
-
-  // PROJECT FILTERING
-  document.querySelectorAll(".filter").forEach(button => {
-    button.addEventListener("click", () => {
-
-      document.querySelectorAll(".filter").forEach(item => {
-        item.classList.remove("active");
-      });
-
-      button.classList.add("active");
-
-      const filter = button.dataset.filter;
-
-      document.querySelectorAll(".project-card").forEach(card => {
-        card.style.display =
-          filter === "all" || card.dataset.category === filter
-            ? ""
-            : "none";
-      });
-    });
   });
 
   // SCROLL REVEAL ANIMATION

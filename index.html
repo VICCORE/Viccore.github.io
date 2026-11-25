@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#081326">
-  <meta name="description" content="Victor N. — Frontend Developer, UI/UX Designer and AI Specialist.">
+  <meta name="description" content="Victor N. — Frontend Developer, UI/UX Designer and AI enthusiast.">
   <meta property="og:title" content="Victor N. | VN Digital">
-  <meta property="og:description" content="Frontend Developer | UI/UX Designer | AI Specialist">
+  <meta property="og:description" content="Frontend Developer | UI/UX Designer | AI enthusiast">
   <meta property="og:type" content="website">
 
   <title>Victor N. | VN Digital — Digital Portfolio</title>
@@ -315,6 +315,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: center 25%;
       display: block;
     }
 
@@ -332,7 +333,7 @@
 
     .float-card b {
       display: block;
-      font-size: 1.2rem;
+      font-size: 1.05rem;
       color: var(--cyan);
     }
 
@@ -911,659 +912,802 @@
 
 <body>
 
-<header>
-  <div class="container nav">
+  <!-- HEADER AND NAVIGATION -->
+  <header>
+    <div class="container nav">
 
-    <a class="brand" href="#home" aria-label="VN Digital home">
-      VN<span>.</span> DIGITAL
-    </a>
+      <a class="brand" href="#home" aria-label="Victor N. home">
+        VICTOR N<span>.</span>
+      </a>
 
-    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
-      <a href="#about">About</a>
-      <a href="#skills">Expertise</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#credentials">Credentials</a>
-      <a href="#contact">Contact</a>
-    </nav>
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Expertise</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#credentials">Credentials</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-    <div class="nav-actions">
-      <button class="icon-btn" id="themeToggle" aria-label="Toggle light and dark theme">☼</button>
-      <a class="btn btn-primary" href="#contact">Let's talk ↗</a>
-      <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
-    </div>
+      <div class="nav-actions">
 
-  </div>
-</header>
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle light and dark theme">
+          ☼
+        </button>
 
-<main>
+        <a class="btn btn-primary" href="#contact">
+          Let's talk ↗
+        </a>
 
-  <!-- HERO SECTION -->
-  <section class="hero" id="home">
-    <div class="container">
-
-      <div class="hero-grid">
-
-        <div>
-
-          <div class="availability">
-            <span class="dot"></span>
-            Open to meaningful opportunities
-          </div>
-
-          <p class="eyebrow">Welcome to VN Digital</p>
-
-          <h1>
-            Ideas into<br>
-            <span class="gradient">digital impact.</span>
-          </h1>
-
-          <p class="hero-copy">
-            I'm <strong>Victor N.</strong> — a Frontend Developer,
-            UI/UX Designer and AI Specialist focused on creating
-            thoughtful, accessible and future-ready digital experiences.
-          </p>
-
-          <div class="hero-buttons">
-            <a class="btn btn-primary" href="#projects">Explore my work ↗</a>
-            <a class="btn btn-whatsapp" href="https://wa.me/2349161668124" target="_blank" rel="noopener">
-              WhatsApp me ↗
-            </a>
-          </div>
-
-          <div class="quick-links">
-            <a href="#about">Discover my story ↓</a>
-            <a href="mailto:victornwabuwa728@gmail.com">Email me ↗</a>
-          </div>
-
-        </div>
-
-        <div class="portrait-wrap">
-
-          <div class="portrait">
-            <img
-              src="assets/3F07CB16-2E53-49C1-9CB3-EBEF2276047E.png"
-              alt="Professional portrait of Victor N."
-              loading="eager"
-            >
-          </div>
-
-          <div class="float-card">
-            <b>20+ years</b>
-            Professional experience
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="stats">
-
-        <div class="stat">
-          <b>20+</b>
-          <span>Years of professional experience</span>
-        </div>
-
-        <div class="stat">
-          <b>3</b>
-          <span>Core areas of focus</span>
-        </div>
-
-        <div class="stat">
-          <b>2028</b>
-          <span>Expected graduation</span>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ABOUT SECTION -->
-  <section class="section light-section" id="about">
-    <div class="container about-grid reveal">
-
-      <div>
-
-        <p class="eyebrow">A little about me</p>
-
-        <h2 class="section-title">
-          Technology with <span class="gradient">purpose.</span>
-        </h2>
-
-        <p class="section-intro">
-          I bring a broad professional perspective to digital problem-solving,
-          combining frontend development, user-centred design and the practical
-          possibilities of artificial intelligence.
-        </p>
-
-      </div>
-
-      <div class="about-card">
-
-        <h3>My approach</h3>
-
-        <p>
-          I value clarity, usability, continuous learning and solutions
-          that make a meaningful difference. My work is guided by curiosity,
-          thoughtful execution and a commitment to building reliable
-          digital experiences.
-        </p>
-
-        <div class="pill-row">
-          <span class="pill">User-focused</span>
-          <span class="pill">Problem solver</span>
-          <span class="pill">Continuous learner</span>
-          <span class="pill">Technology-driven</span>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- SKILLS SECTION -->
-  <section class="section" id="skills">
-    <div class="container">
-
-      <p class="eyebrow">What I work with</p>
-
-      <h2 class="section-title">
-        Skills & <span class="gradient">expertise.</span>
-      </h2>
-
-      <p class="section-intro">
-        A multidisciplinary toolkit spanning interface development,
-        design, modern workflows and AI-enabled problem-solving.
-      </p>
-
-      <div class="skills-grid">
-
-        <article class="skill-card reveal">
-          <div class="skill-icon">⌘</div>
-          <h3>Frontend Development</h3>
-          <p>
-            HTML5, CSS3, JavaScript, semantic markup,
-            responsive layouts and interactive web experiences.
-          </p>
-        </article>
-
-        <article class="skill-card reveal">
-          <div class="skill-icon">✳</div>
-          <h3>UI/UX Design</h3>
-          <p>
-            User-centred design, wireframing, visual hierarchy,
-            accessibility and intuitive interfaces.
-          </p>
-        </article>
-
-        <article class="skill-card reveal">
-          <div class="skill-icon">◈</div>
-          <h3>Artificial Intelligence</h3>
-          <p>
-            AI concepts, practical AI tools, workflow exploration
-            and responsible adoption.
-          </p>
-        </article>
-
-        <article class="skill-card reveal">
-          <div class="skill-icon">✎</div>
-          <h3>Prompt Engineering</h3>
-          <p>
-            Structured prompting, task design, iteration
-            and clear human-AI communication.
-          </p>
-        </article>
-
-        <article class="skill-card reveal">
-          <div class="skill-icon">⌁</div>
-          <h3>AI Automation</h3>
-          <p>
-            Exploring automation workflows that reduce repetitive
-            work and improve efficiency.
-          </p>
-        </article>
-
-        <article class="skill-card reveal">
-          <div class="skill-icon">⌘</div>
-          <h3>Tools & IT</h3>
-          <p>
-            Technical support, IT support
-            and practical digital troubleshooting.
-          </p>
-        </article>
+        <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">
+          ☰
+        </button>
 
       </div>
     </div>
-  </section>
+  </header>
 
-  <!-- EXPERIENCE SECTION -->
-  <section class="section light-section" id="experience">
-    <div class="container reveal">
+  <main>
 
-      <p class="eyebrow">Professional journey</p>
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
 
-      <h2 class="section-title">
-        Experience & <span class="gradient">development.</span>
-      </h2>
+      <div class="container">
 
-      <p class="section-intro">
-        A career shaped by professional experience and continuous development.
-        Specific roles, organisations and dates can be added to make this
-        timeline a detailed record.
-      </p>
+        <div class="hero-grid">
 
-      <div class="timeline">
+          <div>
 
-        <article class="timeline-card">
-          <span class="date">20+ years · Professional experience</span>
-          <h3>Professional Practice & Development</h3>
-          <p>
-            Broad professional experience across technology and related work.
-            Specific job titles, employers, responsibilities
-            and achievements can be added here.
-          </p>
-          <span class="tag">Career experience</span>
-        </article>
+            <div class="availability">
+              <span class="dot"></span>
+              Open to meaningful opportunities
+            </div>
 
-        <article class="timeline-card">
-          <span class="date">Current · Ongoing</span>
-          <h3>Frontend Development, UI/UX & AI</h3>
-          <p>
-            Continuously developing practical skills in modern frontend
-            technologies, user experience, prompt engineering
-            and AI-assisted workflows.
-          </p>
-          <span class="tag">Professional development</span>
-        </article>
+            <p class="eyebrow">Welcome to Victor N.</p>
 
-        <article class="timeline-card">
-          <span class="date">In progress</span>
-          <h3>ITF Level 3 Specialist</h3>
-          <p>
-            Professional training currently in progress.
-            The official programme name, provider and completion date
-            can be added when awarded.
-          </p>
-          <span class="tag">Training in progress</span>
-        </article>
+            <h1>
+              Ideas into<br>
+              <span class="gradient">digital impact.</span>
+            </h1>
 
-      </div>
-    </div>
-  </section>
+            <p class="hero-copy">
+              I'm <strong>Victor N.</strong> — a Frontend Developer,
+              UI/UX Designer and technology enthusiast focused on
+              creating thoughtful, accessible and future-ready
+              digital experiences.
+            </p>
 
-  <!-- PROJECTS SECTION -->
-  <section class="section" id="projects">
-    <div class="container">
+            <div class="hero-buttons">
 
-      <p class="eyebrow">Selected work</p>
+              <a class="btn btn-primary" href="#projects">
+                Explore my work ↗
+              </a>
 
-      <h2 class="section-title">
-        Projects & <span class="gradient">experiments.</span>
-      </h2>
+              <a
+                class="btn btn-whatsapp"
+                href="https://wa.me/2349161668124"
+                target="_blank"
+                rel="noopener">
+                WhatsApp me ↗
+              </a>
 
-      <p class="section-intro">
-        A showcase of digital concepts, practical experiments
-        and technology-focused ideas.
-      </p>
+            </div>
 
-      <div class="projects-grid">
-
-        <!-- AI PROJECT -->
-        <article class="project-card reveal">
-
-          <div class="project-visual ai-visual">
-
-            <div class="ai-interface">
-
-              <div class="ai-top">
-                <span class="ai-orb">✦</span>
-                VN AI ASSISTANT
-              </div>
-
-              <div class="ai-message">
-                Hello! How can I help you today?
-              </div>
-
-              <div class="ai-message answer">
-                I can help with ideas, information and everyday digital tasks.
-              </div>
-
-              <div class="ai-input">
-                <span>Ask your assistant...</span>
-                <span>➤</span>
-              </div>
-
+            <div class="quick-links">
+              <a href="#about">Discover my story ↓</a>
+              <a href="mailto:victornwabuwa728@gmail.com">Email me ↗</a>
             </div>
 
           </div>
 
-          <h3>AI-Powered Digital Assistant</h3>
+          <div class="portrait-wrap">
+
+            <div class="portrait">
+
+              <img
+                src="assets/3F07CB16-2E53-49C1-9CB3-EBEF2276047E.png"
+                alt="AI-generated professional portrait representing Victor N."
+                loading="eager">
+
+            </div>
+
+            <div class="float-card">
+              <b>4 months</b>
+              Practical experience
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="stats">
+
+          <div class="stat">
+            <b>4 months</b>
+            <span>Practical experience</span>
+          </div>
+
+          <div class="stat">
+            <b>3</b>
+            <span>Core areas of focus</span>
+          </div>
+
+          <div class="stat">
+            <b>2028</b>
+            <span>Expected graduation</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section light-section" id="about">
+
+      <div class="container about-grid reveal">
+
+        <div>
+
+          <p class="eyebrow">A little about me</p>
+
+          <h2 class="section-title">
+            Technology with <span class="gradient">purpose.</span>
+          </h2>
+
+          <p class="section-intro">
+            I'm an early-career developer building practical experience
+            through personal projects, continuous learning and hands-on
+            development. I enjoy combining frontend development,
+            user-centred design and the practical possibilities of
+            artificial intelligence.
+          </p>
+
+        </div>
+
+        <div class="about-card">
+
+          <h3>My approach</h3>
 
           <p>
-            A conceptual AI assistant interface designed to demonstrate
-            how artificial intelligence can support everyday digital tasks,
-            provide helpful information and simplify user interactions.
+            I value clarity, usability, continuous learning and solutions
+            that make a meaningful difference. My work is guided by
+            curiosity, thoughtful execution and a commitment to building
+            reliable digital experiences.
           </p>
 
           <div class="pill-row">
-            <span class="pill">Artificial Intelligence</span>
-            <span class="pill">UI/UX Design</span>
-            <span class="pill">Automation Concept</span>
-          </div>
-
-          <div class="project-actions">
-            <span class="text-link">Concept project · UI demonstration</span>
-          </div>
-
-        </article>
-
-      </div>
-
-      <p class="section-intro" style="margin-top:25px;font-size:.85rem;">
-        Note: The AI assistant shown here is a portfolio concept and visual
-        demonstration, not a deployed AI application.
-      </p>
-
-    </div>
-  </section>
-
-  <!-- EDUCATION AND CERTIFICATIONS -->
-  <section class="section light-section" id="credentials">
-    <div class="container">
-
-      <p class="eyebrow">Learning & qualifications</p>
-
-      <h2 class="section-title">
-        Education & <span class="gradient">certifications.</span>
-      </h2>
-
-      <div class="timeline">
-
-        <article class="timeline-card">
-          <span class="date">Expected 2028 · 300 Level</span>
-          <h3>B.Sc. Computer Science</h3>
-          <p>
-            Ignatius Ajuru University of Education —
-            currently pursuing studies in Computer Science.
-          </p>
-          <span class="tag">Undergraduate education</span>
-        </article>
-
-      </div>
-
-      <div class="cert-grid">
-
-        <article class="cert-card">
-          <small>In progress</small>
-          <h3>ITF Level 3 Specialist</h3>
-          <p>
-            Professional training currently underway.
-            The awarding body and certificate details can be added
-            after successful completion.
-          </p>
-        </article>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- CONTACT SECTION -->
-  <section class="section light-section" id="contact">
-    <div class="container">
-
-      <p class="eyebrow">Start a conversation</p>
-
-      <h2 class="section-title">
-        Have an idea? <span class="gradient">Let's connect.</span>
-      </h2>
-
-      <p class="section-intro">
-        For professional enquiries, collaborations, opportunities
-        or a conversation about technology, get in touch.
-      </p>
-
-      <div class="contact-grid">
-
-        <div>
-
-          <h3>Contact details</h3>
-
-          <p class="muted">
-            I welcome thoughtful conversations and opportunities
-            to create useful digital experiences.
-          </p>
-
-          <div class="contact-details">
-
-            <div class="contact-item">
-              <small>Email</small>
-              <a href="mailto:victornwabuwa728@gmail.com">
-                <strong>victornwabuwa728@gmail.com</strong>
-              </a>
-            </div>
-
-            <div class="contact-item">
-              <small>WhatsApp</small>
-              <a
-                href="https://wa.me/2349161668124"
-                target="_blank"
-                rel="noopener"
-                class="btn btn-whatsapp"
-              >
-                Chat with me on WhatsApp ↗
-              </a>
-              <div style="margin-top:9px;">
-                <strong>+234 916 166 8124</strong>
-              </div>
-            </div>
-
-            <div class="contact-item">
-              <small>Website</small>
-              <a
-                class="website-address"
-                href="https://www.vn.digital.com"
-                target="_blank"
-                rel="noopener"
-              >
-                www.Vn.digital.com ↗
-              </a>
-            </div>
-
-            <div class="contact-item">
-              <small>Location</small>
-              <strong>Port Harcourt, Rivers State, Nigeria</strong>
-            </div>
-
+            <span class="pill">User-focused</span>
+            <span class="pill">Problem solver</span>
+            <span class="pill">Continuous learner</span>
+            <span class="pill">Technology-driven</span>
           </div>
 
         </div>
 
-        <form class="contact-form" id="contactForm">
+      </div>
 
-          <div class="field">
-            <label for="senderName">Your name</label>
-            <input
-              id="senderName"
-              name="name"
-              required
-              placeholder="Full name"
-            >
-          </div>
+    </section>
 
-          <div class="field">
-            <label for="senderEmail">Your email</label>
-            <input
-              id="senderEmail"
-              name="email"
-              type="email"
-              required
-              placeholder="you@example.com"
-            >
-          </div>
+    <!-- SKILLS AND EXPERTISE -->
+    <section class="section" id="skills">
 
-          <div class="field">
-            <label for="subject">Subject</label>
-            <input
-              id="subject"
-              name="subject"
-              required
-              placeholder="How can I help?"
-            >
-          </div>
+      <div class="container">
 
-          <div class="field">
-            <label for="message">Message</label>
-            <textarea
-              id="message"
-              name="message"
-              required
-              placeholder="Write your message..."
-            ></textarea>
-          </div>
+        <p class="eyebrow">What I work with</p>
 
-          <button class="btn btn-primary" type="submit">
-            Send me an email ↗
-          </button>
+        <h2 class="section-title">
+          Skills & <span class="gradient">expertise.</span>
+        </h2>
 
-          <p class="form-note">
-            This form opens your device's default email app with your message
-            prepared. It does not send or store messages on this website.
-          </p>
+        <p class="section-intro">
+          A developing toolkit spanning interface development,
+          design, modern workflows and AI-enabled problem-solving.
+        </p>
 
-          <p class="form-note" id="formStatus" aria-live="polite"></p>
+        <div class="skills-grid">
 
-        </form>
+          <article class="skill-card reveal">
+            <div class="skill-icon">⌘</div>
+            <h3>Frontend Development</h3>
+            <p>
+              HTML5, CSS3, JavaScript, semantic markup,
+              responsive layouts and interactive web experiences.
+            </p>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon">✳</div>
+            <h3>UI/UX Design</h3>
+            <p>
+              User-centred design, wireframing, visual hierarchy,
+              accessibility and intuitive interfaces.
+            </p>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon">◈</div>
+            <h3>Artificial Intelligence</h3>
+            <p>
+              AI concepts, practical AI tools, workflow exploration
+              and responsible adoption.
+            </p>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon">✎</div>
+            <h3>Prompt Engineering</h3>
+            <p>
+              Structured prompting, task design, iteration and
+              clear human-AI communication.
+            </p>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon">⌁</div>
+            <h3>AI Automation</h3>
+            <p>
+              Exploring automation workflows that reduce repetitive
+              work and improve efficiency.
+            </p>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon">⌘</div>
+            <h3>Tools & IT</h3>
+            <p>
+              Technical support, IT support and practical digital
+              troubleshooting.
+            </p>
+          </article>
+
+        </div>
 
       </div>
+
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section class="section light-section" id="experience">
+
+      <div class="container reveal">
+
+        <p class="eyebrow">Professional journey</p>
+
+        <h2 class="section-title">
+          Experience & <span class="gradient">development.</span>
+        </h2>
+
+        <p class="section-intro">
+          My journey is at an early stage, with four months of
+          practical experience and a focus on learning, building
+          projects and developing my skills.
+        </p>
+
+        <div class="timeline">
+
+          <article class="timeline-card">
+
+            <span class="date">4 months · Practical experience</span>
+
+            <h3>Frontend Development & Digital Projects</h3>
+
+            <p>
+              Building practical experience through hands-on website
+              projects, responsive page development, interface
+              improvements and continuous practice with HTML,
+              CSS and JavaScript.
+            </p>
+
+            <span class="tag">Practical experience</span>
+
+          </article>
+
+          <article class="timeline-card">
+
+            <span class="date">Current · Ongoing</span>
+
+            <h3>Frontend Development, UI/UX & AI</h3>
+
+            <p>
+              Continuously developing practical skills in modern
+              frontend technologies, user experience, prompt
+              engineering and AI-assisted workflows.
+            </p>
+
+            <span class="tag">Professional development</span>
+
+          </article>
+
+          <article class="timeline-card">
+
+            <span class="date">In progress</span>
+
+            <h3>ITF Level 3 Specialist</h3>
+
+            <p>
+              Professional training currently in progress.
+              The official programme name, provider and completion
+              date can be added when awarded.
+            </p>
+
+            <span class="tag">Training in progress</span>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="section" id="projects">
+
+      <div class="container">
+
+        <p class="eyebrow">Selected work</p>
+
+        <h2 class="section-title">
+          Projects & <span class="gradient">experiments.</span>
+        </h2>
+
+        <p class="section-intro">
+          A showcase of digital concepts, practical experiments
+          and technology-focused ideas.
+        </p>
+
+        <div class="projects-grid">
+
+          <article class="project-card reveal">
+
+            <div class="project-visual ai-visual">
+
+              <div class="ai-interface">
+
+                <div class="ai-top">
+                  <span class="ai-orb">✦</span>
+                  VN AI ASSISTANT
+                </div>
+
+                <div class="ai-message">
+                  Hello! How can I help you today?
+                </div>
+
+                <div class="ai-message answer">
+                  I can help with ideas, information and everyday
+                  digital tasks.
+                </div>
+
+                <div class="ai-input">
+                  <span>Ask your assistant...</span>
+                  <span>➤</span>
+                </div>
+
+              </div>
+
+            </div>
+
+            <h3>AI-Powered Digital Assistant</h3>
+
+            <p>
+              A conceptual AI assistant interface designed to
+              demonstrate how artificial intelligence can support
+              everyday digital tasks, provide helpful information
+              and simplify user interactions.
+            </p>
+
+            <div class="pill-row">
+              <span class="pill">Artificial Intelligence</span>
+              <span class="pill">UI/UX Design</span>
+              <span class="pill">Automation Concept</span>
+            </div>
+
+            <div class="project-actions">
+              <span class="text-link">
+                Concept project · UI demonstration
+              </span>
+            </div>
+
+          </article>
+
+        </div>
+
+        <p class="section-intro" style="margin-top:25px;font-size:.85rem;">
+          Note: The AI assistant shown here is a portfolio concept
+          and visual demonstration, not a deployed AI application.
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- EDUCATION AND CERTIFICATIONS -->
+    <section class="section light-section" id="credentials">
+
+      <div class="container">
+
+        <p class="eyebrow">Learning & qualifications</p>
+
+        <h2 class="section-title">
+          Education & <span class="gradient">certifications.</span>
+        </h2>
+
+        <div class="timeline">
+
+          <article class="timeline-card">
+
+            <span class="date">Expected 2028 · 300 Level</span>
+
+            <h3>B.Sc. Computer Science</h3>
+
+            <p>
+              Ignatius Ajuru University of Education — currently
+              pursuing studies in Computer Science.
+            </p>
+
+            <span class="tag">Undergraduate education</span>
+
+          </article>
+
+        </div>
+
+        <div class="cert-grid">
+
+          <article class="cert-card">
+
+            <small>In progress</small>
+
+            <h3>ITF Level 3 Specialist</h3>
+
+            <p>
+              Professional training currently underway.
+              The awarding body and certificate details can be
+              added after successful completion.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section light-section" id="contact">
+
+      <div class="container">
+
+        <p class="eyebrow">Start a conversation</p>
+
+        <h2 class="section-title">
+          Have an idea? <span class="gradient">Let's connect.</span>
+        </h2>
+
+        <p class="section-intro">
+          For professional enquiries, collaborations, opportunities
+          or a conversation about technology, get in touch.
+        </p>
+
+        <div class="contact-grid">
+
+          <div>
+
+            <h3>Contact details</h3>
+
+            <p class="muted">
+              I welcome thoughtful conversations and opportunities
+              to create useful digital experiences.
+            </p>
+
+            <div class="contact-details">
+
+              <div class="contact-item">
+                <small>Email</small>
+
+                <a href="mailto:victornwabuwa728@gmail.com">
+                  <strong>victornwabuwa728@gmail.com</strong>
+                </a>
+              </div>
+
+              <div class="contact-item">
+
+                <small>WhatsApp</small>
+
+                <a
+                  href="https://wa.me/2349161668124"
+                  target="_blank"
+                  rel="noopener"
+                  class="btn btn-whatsapp">
+                  Chat with me on WhatsApp ↗
+                </a>
+
+                <div style="margin-top:9px;">
+                  <strong>+234 916 166 8124</strong>
+                </div>
+
+              </div>
+
+              <div class="contact-item">
+
+                <small>Website</small>
+
+                <a
+                  class="website-address"
+                  href="https://www.vn.digital.com"
+                  target="_blank"
+                  rel="noopener">
+                  www.Vn.digital.com ↗
+                </a>
+
+              </div>
+
+              <div class="contact-item">
+
+                <small>Location</small>
+
+                <strong>Port Harcourt, Rivers State, Nigeria</strong>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <form class="contact-form" id="contactForm">
+
+            <div class="field">
+
+              <label for="senderName">Your name</label>
+
+              <input
+                id="senderName"
+                name="name"
+                required
+                placeholder="Full name">
+
+            </div>
+
+            <div class="field">
+
+              <label for="senderEmail">Your email</label>
+
+              <input
+                id="senderEmail"
+                name="email"
+                type="email"
+                required
+                placeholder="you@example.com">
+
+            </div>
+
+            <div class="field">
+
+              <label for="subject">Subject</label>
+
+              <input
+                id="subject"
+                name="subject"
+                required
+                placeholder="How can I help?">
+
+            </div>
+
+            <div class="field">
+
+              <label for="message">Message</label>
+
+              <textarea
+                id="message"
+                name="message"
+                required
+                placeholder="Write your message..."></textarea>
+
+            </div>
+
+            <button class="btn btn-primary" type="submit">
+              Send me an email ↗
+            </button>
+
+            <p class="form-note">
+              This form opens your device's default email app
+              with your message prepared. It does not send or
+              store messages on this website.
+            </p>
+
+            <p class="form-note" id="formStatus" aria-live="polite"></p>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="container footer-row">
+
+      <span>
+        © <span id="year"></span> Victor N. · VN Digital.
+        All rights reserved.
+      </span>
+
+      <span>
+        Designed with purpose. Built for what's next.
+      </span>
+
+      <div class="socials">
+
+        <a href="mailto:victornwabuwa728@gmail.com">
+          Email
+        </a>
+
+        <a
+          href="https://wa.me/2349161668124"
+          target="_blank"
+          rel="noopener">
+          WhatsApp ↗
+        </a>
+
+      </div>
+
     </div>
-  </section>
 
-</main>
+  </footer>
 
-<!-- FOOTER -->
-<footer>
-  <div class="container footer-row">
+  <!-- BACK TO TOP BUTTON -->
+  <button id="topBtn" aria-label="Back to top">
+    ↑
+  </button>
 
-    <span>
-      © <span id="year"></span> Victor N. · VN Digital. All rights reserved.
-    </span>
+  <!-- JAVASCRIPT -->
+  <script>
 
-    <span>Designed with purpose. Built for what's next.</span>
+    const PORTFOLIO_EMAIL = "victornwabuwa728@gmail.com";
 
-    <div class="socials">
-      <a href="mailto:victornwabuwa728@gmail.com">Email</a>
-      <a href="https://wa.me/2349161668124" target="_blank" rel="noopener">WhatsApp ↗</a>
-    </div>
+    // Mobile navigation
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
 
-  </div>
-</footer>
+    menuBtn.addEventListener("click", () => {
 
-<button id="topBtn" aria-label="Back to top">↑</button>
+      const open = navLinks.classList.toggle("open");
 
-<script>
-  // PROFESSIONAL EMAIL ADDRESS
-  const PORTFOLIO_EMAIL = "victornwabuwa728@gmail.com";
+      menuBtn.setAttribute("aria-expanded", String(open));
 
-  // WHATSAPP NUMBER
-  const WHATSAPP_NUMBER = "2349161668124";
+      menuBtn.textContent = open ? "×" : "☰";
 
-  // MOBILE NAVIGATION
-  const menuBtn = document.getElementById("menuBtn");
-  const navLinks = document.getElementById("navLinks");
-
-  menuBtn.addEventListener("click", () => {
-    const open = navLinks.classList.toggle("open");
-
-    menuBtn.setAttribute("aria-expanded", String(open));
-    menuBtn.textContent = open ? "×" : "☰";
-  });
-
-  navLinks.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", () => {
-      navLinks.classList.remove("open");
-      menuBtn.setAttribute("aria-expanded", "false");
-      menuBtn.textContent = "☰";
     });
-  });
 
-  // DARK AND LIGHT MODE
-  const themeToggle = document.getElementById("themeToggle");
-  const savedTheme = localStorage.getItem("vn-theme");
+    navLinks.querySelectorAll("a").forEach(link => {
 
-  if (savedTheme === "light") {
-    document.body.classList.add("light");
-  }
+      link.addEventListener("click", () => {
 
-  themeToggle.textContent =
-    document.body.classList.contains("light") ? "☾" : "☼";
+        navLinks.classList.remove("open");
 
-  themeToggle.addEventListener("click", () => {
-    document.body.classList.toggle("light");
+        menuBtn.setAttribute("aria-expanded", "false");
 
-    const theme = document.body.classList.contains("light")
-      ? "light"
-      : "dark";
+        menuBtn.textContent = "☰";
 
-    localStorage.setItem("vn-theme", theme);
+      });
 
-    themeToggle.textContent = theme === "light" ? "☾" : "☼";
-  });
+    });
 
-  // CURRENT YEAR
-  document.getElementById("year").textContent =
-    new Date().getFullYear();
+    // Light and dark theme
+    const themeToggle = document.getElementById("themeToggle");
 
-  // CONTACT FORM
-  document.getElementById("contactForm").addEventListener("submit", event => {
-    event.preventDefault();
+    const savedTheme = localStorage.getItem("vn-theme");
 
-    const data = new FormData(event.currentTarget);
+    if (savedTheme === "light") {
 
-    const name = data.get("name").trim();
-    const sender = data.get("email").trim();
-    const subject = encodeURIComponent(data.get("subject").trim());
+      document.body.classList.add("light");
 
-    const body = encodeURIComponent(
-      `Hello Victor,\n\n${data.get("message").trim()}\n\nRegards,\n${name}\n${sender}`
+    }
+
+    themeToggle.textContent =
+      document.body.classList.contains("light") ? "☾" : "☼";
+
+    themeToggle.addEventListener("click", () => {
+
+      document.body.classList.toggle("light");
+
+      const theme =
+        document.body.classList.contains("light")
+          ? "light"
+          : "dark";
+
+      localStorage.setItem("vn-theme", theme);
+
+      themeToggle.textContent =
+        theme === "light" ? "☾" : "☼";
+
+    });
+
+    // Automatic copyright year
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    // Contact form
+    document.getElementById("contactForm").addEventListener(
+      "submit",
+      event => {
+
+        event.preventDefault();
+
+        const data = new FormData(event.currentTarget);
+
+        const name = data.get("name").trim();
+
+        const sender = data.get("email").trim();
+
+        const subject = encodeURIComponent(
+          data.get("subject").trim()
+        );
+
+        const body = encodeURIComponent(
+          `Hello Victor,\n\n${data.get("message").trim()}\n\nRegards,\n${name}\n${sender}`
+        );
+
+        window.location.href =
+          `mailto:${PORTFOLIO_EMAIL}?subject=${subject}&body=${body}`;
+
+      }
     );
 
-    window.location.href =
-      `mailto:${PORTFOLIO_EMAIL}?subject=${subject}&body=${body}`;
-  });
+    // Scroll reveal animation
+    const observer = new IntersectionObserver(
+      entries => {
 
-  // SCROLL REVEAL ANIMATION
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        observer.unobserve(entry.target);
+        entries.forEach(entry => {
+
+          if (entry.isIntersecting) {
+
+            entry.target.classList.add("visible");
+
+            observer.unobserve(entry.target);
+
+          }
+
+        });
+
+      },
+      {
+        threshold: 0.12
       }
+    );
+
+    document.querySelectorAll(".reveal").forEach(element => {
+
+      observer.observe(element);
+
     });
-  }, {
-    threshold: 0.12
-  });
 
-  document.querySelectorAll(".reveal").forEach(element => {
-    observer.observe(element);
-  });
+    // Back to top button
+    const topBtn = document.getElementById("topBtn");
 
-  // BACK TO TOP BUTTON
-  const topBtn = document.getElementById("topBtn");
+    window.addEventListener("scroll", () => {
 
-  window.addEventListener("scroll", () => {
-    topBtn.style.display =
-      window.scrollY > 500 ? "block" : "none";
-  });
+      topBtn.style.display =
+        window.scrollY > 500 ? "block" : "none";
 
-  topBtn.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
     });
-  });
-</script>
+
+    topBtn.addEventListener("click", () => {
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+
+    });
+
+  </script>
 
 </body>
 </html>
